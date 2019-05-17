@@ -20,11 +20,8 @@ def status_ae():
     return
 
 def updt_fan(velo):
-    lbl_velocity_fan.configure(text='Lüfter: ' + str(velo) + ' > (' + str((velo/32000)*100) + '%)' )
+    lbl_velocity_fan.configure(text='Lüfter: ' + str(velo) + ' > (' + str((velo/32000)*100) + '%)' ) 
     return
-
-def clicked():
-    lbl_velocity_fan.configure(text='Hakko')
 
 
 window = Tk()
@@ -47,10 +44,6 @@ lbl_velocity_stpr.grid(column=0, row= 2)
 
 lbl_velocity_fan = Label(window, text='Lüfter: ' + str(velocityfan) + ' > (' + str((velocityfan/32000)*100) + '%)' )
 lbl_velocity_fan.grid(column=0, row= 3)
-
-btn = Button(window,text='Click here', command=clicked)
- 
-btn.grid(column=0,row=0)
 
 window.config(menu=mbar)
 window.mainloop()
