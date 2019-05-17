@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import tkinter
 import tinkerforge
 import os
 import sys
@@ -8,6 +9,7 @@ import time
 import ctypes
 import urllib.request
 
+from tkinter import *
 from tinkerforge.ip_connection import IPConnection
 from tinkerforge.brick_dc import BrickDC
 from tinkerforge.brick_stepper import BrickStepper
@@ -47,6 +49,11 @@ def cb_dcb_velocity(velocity, dcb):
         print("fast Max. Geschwindigkeit erreicht")
 
 if __name__ == "__main__":
+ 
+    window = Tk()
+    window.title("Facharbeit - Schlitten")
+    window.geometry('720x420')
+    window.mainloop()
 
     ipcon = IPConnection()
     dcb = BrickDC(UIDdcb, ipcon)
