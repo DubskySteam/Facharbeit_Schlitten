@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import tkinter
 import tinkerforge
 import os
 import sys
@@ -13,45 +12,49 @@ from tkinter import *
 from tinkerforge.ip_connection import IPConnection
 from tinkerforge.brick_dc import BrickDC
 from tinkerforge.brick_stepper import BrickStepper
-from tinkerforge.bricklet_joystick import BrickletJoystick
 from tinkerforge.bricklet_oled_128x64 import BrickletOLED128x64
 from tinkerforge.bricklet_rotary_poti import BrickletRotaryPoti
 from tinkerforge.bricklet_distance_ir import BrickletDistanceIR
 from tinkerforge.bricklet_linear_poti import BrickletLinearPoti
-
 
 #Initial Setup
 
 HOST = "localhost"
 PORT = 4223
 
-posx = 0
-posy = 0
+ctrl_status = "Ausgeschaltet"
+ctrl_velofan = "28000"
+ctrl_velostepper = "1500"
+ctrl_accstepper = "700"
+ctrl_hz_fan = "6769"
 
-UIDdcb = ""
+UIDdcb = "xRz"
 UIDoled = "yqm"
 UIDstepper = ""
-UIDjoystick = "wah"
 UIDpoti = ""
 UIDropoti = ""
 
 #Funktionen
 
-def up_oled(line, text):
-    oled.write_line(line, 0, text)
+def updt_oled():
+    oled.clear_display()
+    oled.write_line(0, 5, "[ Einstellungen ]")
+    oled.write_line(1, 0, "--------------------------")
+    oled.write_line(2, 0, "Status: " + ctrl_status)
+    oled.write_line(4, 0, "Luefter: " + ctrl_velofan)
+    oled.write_line(5, 0, "Stepper:" + ctrl_velostepper)
+    oled.write_line(6, 0, "Stepper:" + ctrl_accstepper + " - acc")
+    oled.write_line(7, 0, "Frequenz:" + ctrl_hz_fan)
     return
+
+def o_clear():
+    oled.clear_display()
+
+def o_write(zeile,pos,text):
+    oled.write_line(zeile,pos,text)
 
 
 #Callbacks
-
-def cb_pressed():
-    oled.write_line(2,10,"Gedrückt")
-    oled.clear_display()
-
-
-def cb_released():
-    oled.write_line(2,10,"Losgelassen")
-    oled.clear_display()
 
 def cb_dcb_velocity(velocity, dcb):
     if velocity == 32000:
@@ -59,36 +62,25 @@ def cb_dcb_velocity(velocity, dcb):
     elif velocity == 28000:
         print("fast Max. Geschwindigkeit erreicht")
 
-#Hauptfunktion
-
 if __name__ == "__main__":
- 
+
     ipcon = IPConnection()
     oled = BrickletOLED128x64(UIDoled, ipcon)
-    joystick = BrickletJoystick(UIDjoystick, ipcon)
 
     ipcon.connect(HOST, PORT)
 
     oled.clear_display()
-    up_oled(2, "Einstellungen")
-    up_oled(3, "werden gesetzt")
+    o_write(1,5, "Einstellungen")
+    o_write(1,5, "werden gesetzt")
 
-    time.sleep(2)
+    time.sleep(1)
 
     oled.clear_display()
-    up_oled(2, "Callbacks")
-    up_oled(3, "werden registriert")
+    o_write(1,5, "Callbacks")
+    o_write(1,3, "werden registriert")
 
-    joystick.register_callback(joystick.CALLBACK_PRESSED, cb_pressed)
-    joystick.register_callback(joystick.CALLBACK_RELEASED, cb_pressed)
+    updt_oled()
 
-    time.sleep(2)
-    oled.clear_display()
-
-    while True:
-        posx, posy = joystick.get_position()
-        print(posx, posy)
-
-    input("taste drücken")
-    oled.clear_display()
+    input("")
+    o_clear()
     ipcon.disconnect()
