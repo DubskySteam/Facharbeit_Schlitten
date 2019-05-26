@@ -91,12 +91,15 @@ def cb_linearpoti_controller(position):
         stepper.disable()
 
 def cb_irsensor_distance(distance):
-    if distance <= 150:
+    if distance >= 170:
         stepper.drive_forward()
-    elif distance >= 200:
+    elif distance <= 150:
         stepper.stop()
+    elif distance <= 130:
+        stepper.drive_backward()
     else:
         print("Puffer erreicht")
+        stepper.stop()
 
 if __name__ == "__main__":
 
