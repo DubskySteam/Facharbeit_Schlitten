@@ -79,6 +79,7 @@ def cb_stepper_undervoltage():
     dcb.disable()
     o_clear()
     o_write(4,3, "Spannungsabfall")
+    print("Spannungsabfall")
     ipcon.disconnect()
 
 def cb_rotary_fancontrol(position):
@@ -92,10 +93,13 @@ def cb_linearpoti_controller(position):
 
 def cb_irsensor_distance(distance):
     if distance >= 170:
+        print("Stepper -> Vorwärts")
         stepper.drive_forward()
     elif distance <= 150:
+        print("Stepper -> Stop")
         stepper.stop()
     elif distance <= 130:
+        print("Stepper -> Zurück")
         stepper.drive_backward()
     else:
         print("Puffer erreicht")
@@ -113,8 +117,10 @@ if __name__ == "__main__":
     irsensor = BrickletDistanceIR(UIDirsensor, ipcon)
 
     ipcon.connect(HOST, PORT)
+    print("Verbindung unter folgenden Daten: \nIP: " +HOST+"\nPort: "+PORT)
 
     o_clear()
+    print("Einstellungen werden gesetzt")
     o_write(1,5, "Einstellungen")
     o_write(1,5, "werden gesetzt")
 
@@ -133,6 +139,7 @@ if __name__ == "__main__":
     time.sleep(1)
 
     o_clear()
+    print("Callbacks werden registriert")
     o_write(1,5, "Callbacks")
     o_write(1,3, "werden registriert")
 
@@ -144,6 +151,7 @@ if __name__ == "__main__":
     irsensor.register_callback(BrickletDistanceIR.CALLBACK_DISTANCE, cb_irsensor_distance)
 
     o_clear()
+    print("Bricks werden gestartet")
     o_write(1,6, "Bricks")
     o_write(1,3, "werden aktiviert")
 
