@@ -21,7 +21,3 @@
 • Joystick
 
 • OLED
-
-• Analyse
-•• Was lief gut, was schlecht
-••  
