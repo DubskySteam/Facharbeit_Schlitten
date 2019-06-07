@@ -1,0 +1,12 @@
+D:\Projekte\GUI\Schlitten_Interface\bin\Debug\Schlitten_Interface.exe.config
+D:\Projekte\GUI\Schlitten_Interface\bin\Debug\Schlitten_Interface.exe
+D:\Projekte\GUI\Schlitten_Interface\bin\Debug\Schlitten_Interface.pdb
+D:\Projekte\GUI\Schlitten_Interface\bin\Debug\Schlitten_Interface.xml
+D:\Projekte\GUI\Schlitten_Interface\obj\Debug\Schlitten_Interface.vbprojAssemblyReference.cache
+D:\Projekte\GUI\Schlitten_Interface\obj\Debug\Schlitten_Interface.Main.resources
+D:\Projekte\GUI\Schlitten_Interface\obj\Debug\Schlitten_Interface.Resources.resources
+D:\Projekte\GUI\Schlitten_Interface\obj\Debug\Schlitten_Interface.vbproj.GenerateResource.cache
+D:\Projekte\GUI\Schlitten_Interface\obj\Debug\Schlitten_Interface.vbproj.CoreCompileInputs.cache
+D:\Projekte\GUI\Schlitten_Interface\obj\Debug\Schlitten_Interface.exe
+D:\Projekte\GUI\Schlitten_Interface\obj\Debug\Schlitten_Interface.xml
+D:\Projekte\GUI\Schlitten_Interface\obj\Debug\Schlitten_Interface.pdb
