@@ -1,0 +1,24 @@
+Facharbeit Mechatronik
+Inhaltsverzeichnis
+Einleitung	3
+Ziel der Facharbeit	3
+Verwendete Bricks	3
+Verwendete Bricklets	3
+Sensoren | Aktoren	4
+Distance IR	4
+
+Einleitung
+Ziel der Facharbeit
+Das Ziel der Facharbeit ist es, den vorhandenen Schlitten mit Sensoren so um zu funktionieren, dass er mit einem Abstandssensor ein Objekt vor sich wahrnehmen kann und zu diesem Objekt einen Abstand hält.
+Verwendete Bricks
+• Master Brick
+• Stepper Brick
+• DC Brick
+Verwendete Bricklets
+• Distance IR
+• Linear Poti
+• Rotary Poti
+• OLED 128x64
+Sensoren | Aktoren
+Distance IR
+Der Distance IR Sensor ist ein Tinkerforge Bricklet, welches wie der Name bereits sagt, eine Distanz mit Infrarot Licht misst.
