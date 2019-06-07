@@ -1,5 +1,5 @@
 # Dokumentation
-###### Seiten: 11
+###### Seiten: 12
 ## Fertig
 • Einleitung
 
@@ -14,6 +14,8 @@
 • Rotary Poti
 
 • Analyse
+
+• Was lief Gut, was nicht
 ## Fehlt noch
 
 • DC Brick
