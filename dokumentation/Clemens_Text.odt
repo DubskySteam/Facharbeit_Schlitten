@@ -1,5 +1,8 @@
 Facharbeit Mechatronik
+
 Inhaltsverzeichnis
+
+Gliederung
 Einleitung	3
 Ziel der Facharbeit	3
 Verwendete Bricks	3
@@ -32,3 +35,12 @@ In dem unten angefügten Bild wird einem dieses Verfahren noch einmal veranschau
 Anmerkung:
 IR Sensoren dieser Art haben aufgrund ihrer Technik verschiedene Messbereiche.
 Wir haben einen Sensor benutzt der Entfernungen von 5cm bis zu 50cm gut wahrnehmen kann.
+Potentionmeter
+
+Ein Potentionmeter, oder folglich auch oft einfach nur „Poti“ genannt, ist ein elektronisches Bauteil was schwer auf Widerstände baut, und nur durch sie ihren Nutzen erlangen.
+Sie werden auch oft als Spannungsteiler betitelt.
+Der Potentiometer besteht im Normalfall aus zwei wichtigen „Bauteilen“, einem Draht der Widerstand leistet (Widerstandsdraht) und einem Gleitkontakt.
+Dieser Gleitkontakt teilt die gesamte Spannung so gesehen in 2 Teilwiderstände auf, dies erkennt man am besten beim Linearen Poti (Schaubild 3).
+Wenn man nun den Gleitkontakt, welcher meistens auch der Slider ist, bewegt verändern sich auch die Teilwiderstände.
+Diese Teilspannung werden gemessen und als digitales Signal vom Poti übertragen werden.
+Diese simple aber effektive Funktionsweise eignet den Potentiometer im allgemeinen für die elektrische Steuerung von vielen Geräten und Bauteilen.
