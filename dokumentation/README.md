@@ -2,7 +2,8 @@
 ###### Seiten: 1
 ## Fertig
 • Distance IR
-
+• Linear Poti
+• Rotary Poti
 ## Fehlt noch
 • Einleitung
 
@@ -13,10 +14,6 @@
 • DC Brick
 
 • Joystick
-
-• Linear Poti
-
-• Rotary Poti
 
 • OLED
 
