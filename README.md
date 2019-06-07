@@ -13,10 +13,8 @@ Ein ursprünglich als Kameraschlitten gedachtes System soll so umfunktioniert we
 
 **Python Verzeichnis:**
 ```
-- main.py - Brain.exe
-- oled.py - Gibt Infos auf einem 128x64 OLED Display aus.
-- poti.py - Potis werden zur Regelung vom DC & StepperBrick genutzt.
-- stepper.py - Regelt den StepperBrick, welcher den Schlitten fährt.
+- brain.py - Steuerungs Skript (Beinhaltet alle Funktionen)
+- redengine.py - Skript für den RedBrick (Nicht vorhanden, weil lediglich das Imgae aufgespielt werden muss)
 ```
 
 **VB.Net Verzeichnis:**
