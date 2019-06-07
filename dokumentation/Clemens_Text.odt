@@ -21,4 +21,14 @@ Verwendete Bricklets
 • OLED 128x64
 Sensoren | Aktoren
 Distance IR
+
 Der Distance IR Sensor ist ein Tinkerforge Bricklet, welches wie der Name bereits sagt, eine Distanz mit Infrarot Licht misst.
+Der IR Sensor oder auch Infrarot Entfernungsmesser genannt, macht sich zur Distanzberechnung ein Verfahren zu eigen wie es viele andere Entfernungsmesser auch machen, die Triangulation.
+Der IR Sensor hat einen analogen Stromanschluss, welcher ihn mit Strom versorgt und auch eine Infrarot-LED speist. Diese LED sitzt hinter einer Linse die als Fokusglas dient oder einfach gesehen als Polarisator. Durch die Linse strahlt der Sensor nun einen gezielten Infrarot Strahl aus. Trifft dieser Strahl auf ein Objekt, wird er reflektiert.
+Der reflektierte Strahl wird von der zweiten Linse des Sensors aufgenommen und dann zu einem optischen Positionssensor weitergeleitet. Je nach Stelle an der der Infrarotstrahl eintrifft wird auch die Leitfähigkeit beeinflußt.
+Ein Analog-Digital Konverter wandelt es dann zu einer Spannung um, aus der letztendlich die Berechnung der Entfernung stattfindet.
+In dem unten angefügten Bild wird einem dieses Verfahren noch einmal veranschaulicht.
+
+Anmerkung:
+IR Sensoren dieser Art haben aufgrund ihrer Technik verschiedene Messbereiche.
+Wir haben einen Sensor benutzt der Entfernungen von 5cm bis zu 50cm gut wahrnehmen kann.
