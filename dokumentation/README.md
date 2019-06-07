@@ -6,6 +6,8 @@
 • Linear Poti
 
 • Rotary Poti
+
+-Analyse der Gruppenarbeit
 ## Fehlt noch
 • Einleitung
 
